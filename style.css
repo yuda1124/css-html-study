@@ -1,0 +1,9 @@
+a, h1, h2, h3, h4, h5, h6, p, li { margin: 0; padding: 0 }
+body { padding: 10px; }
+ul {list-style: none; }
+em {font-style: normal; }
+a, span, h1, h2, h3, h4, h5, h6, p, span, em, strong {
+  font-size: 14px;
+  font-family: dotum, '돋음', sans-serif;
+  color: #000;
+}
