@@ -3,751 +3,691 @@
   <head>
     <meta charset="utf-8">
     <title>속성조사</title>
-    <style>
-      .list_overflow li {
-        margin-bottom: 10px;
-      }
-      .title {
-        float: left;
-        line-height: 100px;
-        text-align: center;
-        width: 200px;
-        color: white;
-      }
-      .nav_pr {
-        width: 1000px;
-        background: #00c73c;
-      }
-      .nav_pr::after {
-        content: "";
-        clear: left;
-        display: block;
-      }
-      .property .ex {
-        display: inline-block;
-        width: 600px;
-        height: 50px;
-        background-color: rgb(230,230,230);
-        margin: 10px 0;
-      }
-      .property .ex_background {
-        width: 200px;
-        height: 200px;
-        line-height: 100px;
-        text-align: center;
-        margin: 10px 0;
-      }
-      .property .color_name {
-        background-color: red;
-      }
-      .property .color_hex {
-        background-color: #ff0000;
-      }
-      .property .color_rgb {
-        background-color: rgb(255,0,0);
-      }
-      .property .bg_img {
-        background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
-      }
-      .property .bg_pos1 {
-        background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
-        background-position: left top;
-        background-repeat:no-repeat;
-      }
-      .property .bg_pos2 {
-        background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
-        background-position: 50% 50%;
-        background-repeat:no-repeat;
-      }
-      .property .bg_pos3 {
-        background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
-        background-position: 50px 100px;
-        background-repeat:no-repeat;
-      }
-      .property .bg_size_auto {
-        background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
-        background-repeat:no-repeat;
-      }
-      .property .bg_size_length {
-        background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
-        background-size: 50px 50px;
-        background-repeat:no-repeat;
-      }
-      .property .bg_size_percent {
-        background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
-        background-size: 200% 200%;
-        background-repeat:no-repeat;
-      }
-      .property .bg_size_cover {
-        background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
-        background-size: cover;
-        background-repeat:no-repeat;
-      }
-      .property .bg_size_contain {
-        background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
-        background-size: contain;
-        background-repeat:no-repeat;
-      }
-      .property .bg_repeat_repeat {
-        background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
-        background-repeat: repeat;
-      }
-      .property .bg_repeat_x {
-        background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
-        background-repeat: repeat-x;
-      }
-      .property .bg_repeat_y {
-        background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
-        background-repeat: repeat-y;;
-      }
-      .property .bg_repeat_no {
-        background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
-        background-repeat: no-repeat;
-      }
-      .property .bg_repeat_space {
-        background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
-        background-repeat: space;
-      }
-      .property .bg_repeat_round {
-        background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
-        background-repeat: round;
-      }
-      .property .white-space{
-        overflow: auto;
-      }
-      .property .detail {
-        padding: 5px 10px;
-      }
-      .property .detail .name_property {
-        font-size: 30px;
-        margin: 10px 0;
-      }
-      .property .detail .desc_property {
-        background-color: #e4f0f5;
-        margin-bottom: 20px;
-        padding: 15px;
-        font-weight: 400;
-
-      }
-      .property .detail .property_values {
-        margin: 5px 10px;
-      }
-      .property .detail .list_keyword {
-          padding: 10px 20px;
-      }
-      .property .detail .list_keyword .name_keyword{
-        font-size: 20px;
-        margin: 10px 0;
-      }
-      .property .list_wb .break_all {
-        word-break: break-all;
-      }
-      .property .list_wb .keep_all {
-        word-break: keep-all;
-      }
-      .property .list_overflow .hidden {
-        overflow: hidden;
-      }
-      .property .list_overflow .auto {
-        overflow: auto;
-      }
-      .property .list_overflow .scroll {
-        overflow: scroll;
-      }
-      .property .list_ws .nowrap {
-        white-space: nowrap;
-      }
-      .property .list_ws .pre {
-        white-space: pre;
-      }
-      .property .list_ws .pre-wrap {
-        white-space: pre-wrap;
-      }
-      .property .list_ws .pre-line {
-        white-space: pre-line;
-      }
-      .property .list_ww .break_word {
-        word-wrap: break-word;
-      }
-      .property .list_ww .normal {
-        word-wrap: normal;
-      }
-    </style>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class="nav_pr">
-      <a class="title"><bold>display</bold></a>
-      <a class="title"><bold>overflow</bold></a>
-      <a class="title"><bold>background</bold></a>
-      <a class="title"><bold>white-space</bold></a>
-      <a class="title"><bold>white-wrap</bold></a>
-    </header>
-    <main class="property">
-      <div class="detail">
-        <h2 class="name_property">display</h3>
-        <p class="desc_property">
-          대상 엘리먼트에 사용되는 렌더링 박스의 유형을 결정해주는 css 속성.
-          <br>
-          default 값은 HTML 사양 또는 브라우저 / 사용자 기본 스타일 시트에서 가져온다.
-          <br>
-          display property는 키워드 값을 사용하여 지정되며 키워드 값은 6 가지 카테고리로 분류된다.
-        </p>
-        <ul class="list_keyword">
-          <li>
-            <h3 class="name_keyword">1. display-outside</h3>
-            <p class="desc_property">
-              엘리먼트에 의해 생성 된 박스의 외부 디스플레이 타입을 지정하여 엘리먼트가 어떻게 부모 formatting context에 참여 하는지를 지시한다.
-            </p>
-            <strong>Property Values</strong>
-            <ul class="property_values">
-              <li>
-                <p>
-                  <strong>block: </strong>
-                  이 Element는 block element box를 만든다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>inline: </strong>
-                  이 Element는 하나 혹은 이상의 inline element box를 만든다.
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="name_keyword">2. display-inside</h3>
-            <p class="desc_property">
-              엘리먼트에 의해 생성 된 박스의 내부 디스플레이 타입을 지정하며, 그 내용이 박스 안에 어떻게 배치되는지 지시한다.
-            </p>
-            <strong>Property Values</strong>
-            <ul class="property_values">
-              <li>
-                <p>
-                  <strong>table: </strong>
-                  이 Element는 < table > HTML Element처럼 동작합니다. block-level box를 정의합니다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>flex: </strong>
-                  이 Element는 block element 처럼 동작하고 flexbox 모델에 따라 내용을 배치합니다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>grid: </strong>
-                  이 Element는 block element 처럼 동작하고 grid 모델에 따라 내용을 배치합니다.
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="name_keyword">3. display-listitem</h3>
-            <p class="desc_property">
-              이 Element는 내용을 위한 block box와 개별 list-item의 inline box를 만듭니다.
-              <br>
-              명시된 display inside 값이 없으면 box의 inner display-type은 flow가 됩니다.
-              <br>
-              명시된 display outside 값이 없으면 box의 outer display-type은 block이 됩니다.
-            </p>
-          </li>
-          <li>
-            <h3 class="name_keyword">4. display-internal</h3>
-            <p class="desc_property">
-              이 섹션에서는 특정 레이아웃 모드 내에서만 의미있는 "내부" display 값을 정의합니다.
-            </p>
-            <strong>Property Values</strong>
-            <ul class="property_values">
-              <li>
-                <p>
-                  <strong>table-row-group: </strong>
-                  < tbody > HTML Element 처럼 동작한다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>table-header-group: </strong>
-                  < thead > HTML Element 처럼 동작한다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>table-footer-group: </strong>
-                  < tfoot > HTML Element 처럼 동작한다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>table-row: </strong>
-                  < tr > HTML Element 처럼 동작한다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>table-cell: </strong>
-                  < td > HTML Element 처럼 동작한다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>table-column-group: </strong>
-                  < colgroup > HTML Element처럼 동작한다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>table-column: </strong>
-                  < col > HTML Element처럼 동작한다.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>table-caption: </strong>
-                  < caption > HTML Element처럼 동작한다.
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="name_keyword">5. display-box</h3>
-            <p class="desc_property">
-              이 값은 요소가 display box를 생성하는지 여부를 정의합니다.
-            </p>
-            <ul>
-              <li>
-                <p>
-                  <strong>none: </strong>
-                  레이아웃에 영향을 미치지 않도록 요소의 표시를 끈다.
-                </p>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="detail">
-        <h2 class="name_property">overflow</h3>
-        <p class="desc_property">
-          해당 엘리먼트의 블록 레벨 컨테이너(block-level container)보다 내용(content)이 너무 클 때
-          내용을 잘라낼 지, 스크롤 바를 보여줄 지, 혹은 범위를 넘어가게 보여줄 지를 기술한다.
-        </p>
-        <strong>Property Values</strong>
-        <ul class="list_overflow property_values">
-          <li>
-            <p>
-              <strong>visible(default): </strong>
-              내용이 잘리지 않음. 엘리먼트 박스의 범위를 넘어서 보여준다.
-            </p>
-            <p class="ex">
-              여우가 나타난 것은 바로 그때였다.
-              "안녕." 여우가 말했다.
-              "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
-              "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다.
-              "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다.
-              "난 여우야." 여우는 말했다.
-              "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다.
-              "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>hidden: </strong>
-              내용을 자르고, 내용의 나머지는 보여주지 않는다.
-            </p>
-            <p class="ex hidden">
-              여우가 나타난 것은 바로 그때였다.
-              "안녕." 여우가 말했다.
-              "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
-              "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다.
-              "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다.
-              "난 여우야." 여우는 말했다.
-              "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다.
-              "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>scroll: </strong>
-              내용이 잘리지만 남은 내용을 볼 수 있게 하는 스크롤바가 생성된다. (항상 있는)
-            </p>
-            <p class="ex scroll">
-              여우가 나타난 것은 바로 그때였다.
-              "안녕." 여우가 말했다.
-              "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
-              "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다.
-              "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다.
-              "난 여우야." 여우는 말했다.
-              "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다.
-              "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>auto: </strong>
-              내용이 잘리면 남은 내용을 볼 수 있게 하는 스크롤바가 생성된다. (필요시 생성)
-            </p>
-            <p class="ex auto">
-              여우가 나타난 것은 바로 그때였다.
-              "안녕." 여우가 말했다.
-              "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
-              "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다.
-              "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다.
-              "난 여우야." 여우는 말했다.
-              "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다.
-              "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
-            </p>
-          </li>
-          <li>
-            <strong>inherit: </strong>
-            부모 엘리먼트와 같은 값을 사용한다.
-          </li>
-          <li>
-            <strong>initial: </strong>
-            default value를 사용한다.
-          </li>
-        </ul>
-        <p>
-          visible (default)가 아닌 다른 값으로 overflow 속성 사용 시 새로운 블록 서식 문맥(block formatting context)
-          를 생성하게 된다.<br>
-          overflow 속성이 효력을 갖기 위해서는 반드시 블록 레벨 컨테이너의 높이(height 또는 max height)가 설정되어 있거나,
-          white-space가 nowrap으로 설정되어야 한다.
-        </p>
-      </div>
-      <div class="detail">
-        <h2 class="name_property">background</h3>
-        <p class="desc_property">
-          다른 background 속성들을 하나의 선언으로 설정한다.
-        </p>
-        <ul class="list_keyword">
-          <li>
-            <h3 class="name_keyword">1. background-color</h3>
-            <p class="desc_property">
-              사용할 배경색을 명시한다.
-            </p>
-            <strong>Property Values</strong>
-            <ul class="property_values">
-              <li>
-                <strong>유효한 색깔명</strong> ex) background-color: red;
-                <div class="ex_background color_name"></div>
-              </li>
-              <li>
-                <strong>HEX 값</strong> ex) background-color: #ff0000;
-                <div class="ex_background color_hex"></div>
-              </li>
-              <li>
-                <strong>RGB 값</strong> ex) background-color: rgb(255,0,0);
-                <div class="ex_background color_rgb"></div>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="name_keyword">2. background-image</h3>
-            <p class="desc_property">
-            사용할 하나 혹은 여러 개의 배경 이미지를 명시한다. default로 image는 전체 공간에 반복된다.
-            </p>
-            <strong>Property Values</strong>
-            <ul class="property_values">
-              <li>
-                <strong>url</strong> ex) background-image: url("star.png");
-                <div class="ex_background bg_img"></div>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="name_keyword">3. background-position</h3>
-            <p class="desc_property">
-            배경 이미지들의 position을 명시한다.
-            </p>
-            <strong>example</strong>
-            <ul class="property_values">
-              <li>
-                <strong>background-position: center top;</strong>
-                <div class="ex_background bg_pos1"></div>
-              </li>
-              <li>
-                <strong>background-position: 50% 50%;</strong>
-                <div class="ex_background bg_pos2"></div>
-              </li>
-              <li>
-                <strong>background-position: 50px 100px;</strong>
-                <div class="ex_background bg_pos3"></div>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="name_keyword">4. background-size</h3>
-            <p class="desc_property">
-            배경 이미지들의 크기를 명시한다.
-            </p>
-            <strong>Property Values</strong>
-            <ul class="property_values">
-              <li>
-                <strong>auto(default)</strong> 원본 사이즈 크기에 맞게
-                <div class="ex_background bg_size_auto"></div>
-              </li>
-              <li>
-                <strong>length</strong> width, height 순으로 정의. 하나의 값만 주어진다면 height를 auto로 적용
+    <div class="wrapper">
+      <header class="nav_pr">
+        <a class="title" href="#display"><strong>display</strong></a>
+        <a class="title" href="#overflow"><strong>overflow</strong></a>
+        <a class="title" href="#background"><strong>background</strong></a>
+        <a class="title" href="#white-space"><strong>white-space</strong></a>
+        <a class="title" href="#word-break"><strong>word-break</strong></a>
+        <a class="title" href="#white-wrap"><strong>white-wrap</strong></a>
+      </header>
+      <main class="property">
+        <div class="detail">
+          <h2 class="name_property" id="display">display</h2>
+          <p class="desc_property">
+            대상 엘리먼트에 사용되는 렌더링 박스의 유형을 결정해주는 css 속성.
+            <br>
+            default 값은 HTML 사양 또는 브라우저 / 사용자 기본 스타일 시트에서 가져온다.
+            <br>
+            display property는 키워드 값을 사용하여 지정되며 키워드 값은 6 가지 카테고리로 분류된다.
+          </p>
+          <ul class="list_keyword">
+            <li>
+              <h3 class="name_keyword">1. display-outside</h3>
+              <p class="desc_property">
+                엘리먼트에 의해 생성 된 박스의 외부 디스플레이 타입을 지정하여 엘리먼트가 어떻게 부모 formatting context에 참여 하는지를 지시한다.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <p>
+                    <strong>block: </strong>
+                    이 Element는 block element box를 만든다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>inline: </strong>
+                    이 Element는 하나 혹은 이상의 inline element box를 만든다.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">2. display-inside</h3>
+              <p class="desc_property">
+                엘리먼트에 의해 생성 된 박스의 내부 디스플레이 타입을 지정하며, 그 내용이 박스 안에 어떻게 배치되는지 지시한다.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <p>
+                    <strong>table: </strong>
+                    이 Element는 &lt;table> HTML Element처럼 동작합니다. block-level box를 정의합니다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>flex: </strong>
+                    이 Element는 block element 처럼 동작하고 flexbox 모델에 따라 내용을 배치합니다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>grid: </strong>
+                    이 Element는 block element 처럼 동작하고 grid 모델에 따라 내용을 배치합니다.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">3. display-listitem</h3>
+              <p class="desc_property"> 이 Element는 내용을 위한 block box와 개별 list-item의 inline box를 만듭니다.
                 <br>
-                background-size: 50px 50px;
-                <div class="ex_background bg_size_length"></div>
-              </li>
-              <li>
-                <strong>percentage</strong> 부모 element의 percent로 정의. 하나의 값만 주어진다면 height를 auto로 적용
+                명시된 display inside 값이 없으면 box의 inner display-type은 flow가 됩니다.
                 <br>
-                background-size: 200% 200%;
-                <div class="ex_background bg_size_percent"></div>
-              </li>
-              <li>
-                <strong>cover</strong> image를 전체 컨테이너를 덮도록 resize한다.
+                명시된 display outside 값이 없으면 box의 outer display-type은 block이 됩니다.
+              </p>
+            </li>
+            <li>
+              <h3 class="name_keyword">4. display-internal</h3>
+              <p class="desc_property">
+                이 섹션에서는 특정 레이아웃 모드 내에서만 의미있는 "내부" display 값을 정의합니다.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <p>
+                    <strong>table-row-group: </strong>
+                    &lt;tbody> HTML Element 처럼 동작한다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>table-header-group: </strong>
+                    &lt;thead> HTML Element 처럼 동작한다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>table-footer-group: </strong>
+                    &lt;tfoot> HTML Element 처럼 동작한다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>table-row: </strong>
+                    &lt;tr> HTML Element 처럼 동작한다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>table-cell: </strong>
+                    &lt;td> HTML Element 처럼 동작한다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>table-column-group: </strong>
+                    &lt;colgroup> HTML Element처럼 동작한다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>table-column: </strong>
+                    &lt;col> HTML Element처럼 동작한다.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>table-caption: </strong>
+                    &lt;caption> HTML Element처럼 동작한다.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">5. display-box</h3>
+              <p class="desc_property">
+                이 값은 요소가 display box를 생성하는지 여부를 정의합니다.
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    <strong>none: </strong>
+                    레이아웃에 영향을 미치지 않도록 요소의 표시를 끈다.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">6. display-lagacy</h3>
+              <p class="desc_property">
+                CSS2에서는 display property가 하나의 keyword만 사용되었기 때문에 사용했던 value들
+              </p>
+            </li>
+            <li>
+              <h3 class="name_keyword">*. table</h3>
+              <p>display: table 이용해서 만든 테이블</p>
+              <div class="display_table">
+                <div class="display_th">
+                  <div class="display_tr">
+                    <div class="display_td">달</div>
+                    <div class="display_td">금액</div>
+                  </div>
+                </div>
+                <div class="display_tf">
+                  <div class="display_tr">
+                    <div class="display_td">합</div>
+                    <div class="display_td">3000</div>
+                  </div>
+                </div>
+                <div class="display_tb">
+                  <div class="display_tr">
+                    <div class="display_td">1월</div>
+                    <div class="display_td">1000</div>
+                  </div>
+                  <div class="display_tr">
+                    <div class="display_td">2월</div>
+                    <div class="display_td">2000</div>
+                  </div>
+                </div>
+              </div>
+              <p>&lt;table>태그를 이용해서 만든 테이블</p>
+              <table class="table_ex">
+                <thead>
+                  <tr>
+                    <td>달</td>
+                    <td>금액</td>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <td>합</td>
+                    <td>3000</td>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>1월</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <td>2월</td>
+                    <td>2000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+        </div>
+        <div class="detail">
+          <h2 class="name_property" id="overflow">overflow</h2>
+          <p class="desc_property">
+            해당 엘리먼트의 블록 레벨 컨테이너(block-level container)보다 내용(content)이 너무 클 때
+            내용을 잘라낼 지, 스크롤 바를 보여줄 지, 혹은 범위를 넘어가게 보여줄 지를 기술한다.
+          </p>
+          <strong>Property Values</strong>
+          <ul class="list_overflow property_values">
+            <li>
+              <p>
+                <strong>visible(default): </strong>
+                내용이 잘리지 않음. 엘리먼트 박스의 범위를 넘어서 보여준다.
+              </p>
+              <p class="ex">
+                여우가 나타난 것은 바로 그때였다.
+                "안녕." 여우가 말했다.
+                "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
+                "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다.
+                "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다.
+                "난 여우야." 여우는 말했다.
+                "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다.
+                "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>hidden: </strong>
+                내용을 자르고, 내용의 나머지는 보여주지 않는다.
+              </p>
+              <p class="ex hidden">
+                여우가 나타난 것은 바로 그때였다.
+                "안녕." 여우가 말했다.
+                "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
+                "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다.
+                "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다.
+                "난 여우야." 여우는 말했다.
+                "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다.
+                "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>scroll: </strong>
+                내용이 잘리지만 남은 내용을 볼 수 있게 하는 스크롤바가 생성된다. (항상 있는)
+              </p>
+              <p class="ex scroll">
+                여우가 나타난 것은 바로 그때였다.
+                "안녕." 여우가 말했다.
+                "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
+                "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다.
+                "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다.
+                "난 여우야." 여우는 말했다.
+                "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다.
+                "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>auto: </strong>
+                내용이 잘리면 남은 내용을 볼 수 있게 하는 스크롤바가 생성된다. (필요시 생성)
+              </p>
+              <p class="ex auto">
+                여우가 나타난 것은 바로 그때였다.
+                "안녕." 여우가 말했다.
+                "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
+                "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다.
+                "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다.
+                "난 여우야." 여우는 말했다.
+                "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다.
+                "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
+              </p>
+            </li>
+            <li>
+              <strong>inherit: </strong>
+              부모 엘리먼트와 같은 값을 사용한다.
+            </li>
+            <li>
+              <strong>initial: </strong>
+              default value를 사용한다.
+            </li>
+          </ul>
+          <p>
+            visible (default)가 아닌 다른 값으로 overflow 속성 사용 시 새로운 블록 서식 문맥(block formatting context)
+            를 생성하게 된다.<br>
+            overflow 속성이 효력을 갖기 위해서는 반드시 블록 레벨 컨테이너의 높이(height 또는 max height)가 설정되어 있거나,
+            white-space가 nowrap으로 설정되어야 한다.
+          </p>
+        </div>
+        <div class="detail">
+          <h2 class="name_property" id="background">background</h2>
+          <p class="desc_property">
+            다른 background 속성들을 하나의 선언으로 설정한다.
+          </p>
+          <ul class="list_keyword">
+            <li>
+              <h3 class="name_keyword">1. background-color</h3>
+              <p class="desc_property">
+                사용할 배경색을 명시한다.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <strong>유효한 색깔명</strong> ex) background-color: red;
+                  <div class="ex_background color_name"></div>
+                </li>
+                <li>
+                  <strong>HEX 값</strong> ex) background-color: #ff0000;
+                  <div class="ex_background color_hex"></div>
+                </li>
+                <li>
+                  <strong>RGB 값</strong> ex) background-color: rgb(255,0,0);
+                  <div class="ex_background color_rgb"></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">2. background-image</h3>
+              <p class="desc_property">
+              사용할 하나 혹은 여러 개의 배경 이미지를 명시한다. default로 image는 전체 공간에 반복된다.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <strong>url</strong> ex) background-image: url("star.png");
+                  <div class="ex_background bg_img"></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">3. background-position</h3>
+              <p class="desc_property">
+              배경 이미지들의 position을 명시한다.
+              </p>
+              <strong>example</strong>
+              <ul class="property_values">
+                <li>
+                  <strong>background-position: center top;</strong>
+                  <div class="ex_background bg_pos1"></div>
+                </li>
+                <li>
+                  <strong>background-position: 50% 50%;</strong>
+                  <div class="ex_background bg_pos2"></div>
+                </li>
+                <li>
+                  <strong>background-position: 50px 100px;</strong>
+                  <div class="ex_background bg_pos3"></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">4. background-size</h3>
+              <p class="desc_property">
+              배경 이미지들의 크기를 명시한다.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <strong>auto(default)</strong> 원본 사이즈 크기에 맞게
+                  <div class="ex_background bg_size_auto"></div>
+                </li>
+                <li>
+                  <strong>length</strong> width, height 순으로 정의. 하나의 값만 주어진다면 height를 auto로 적용
+                  <p>background-size: 50px 50px;</p>
+                  <div class="ex_background bg_size_length"></div>
+                </li>
+                <li>
+                  <strong>percentage</strong> 부모 element의 percent로 정의. 하나의 값만 주어진다면 height를 auto로 적용
+                  <p>background-size: 200% 200%;</p>
+                  <div class="ex_background bg_size_percent"></div>
+                </li>
+                <li>
+                  <strong>cover</strong> image를 전체 컨테이너를 덮도록 resize한다.
+                  <p>background-size: cover;</p>
+                  <div class="ex_background bg_size_cover"></div>
+                </li>
+                <li>
+                  <strong>contain</strong> 배경 이미지의 크기를 조정하여 이미지가 완전히 보이도록 한다.
+                  <p>background-size: contain;</p>
+                  <div class="ex_background bg_size_contain"></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">5. background-repeat</h3>
+              <p class="desc_property">
+                어떻게 배경 이미지들을 반복할 지 명시한다.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <strong>repeat(default)</strong> 수직으로 수평으로 모두 반복. 잘 맞지 않는다면 마지막 이미지는 잘릴 수 있음
+                  <p>background-repeat: repeat;</p>
+                  <div class="ex_background bg_repeat_repeat"></div>
+                </li>
+                <li>
+                  <strong>repeat-x</strong> 배경 이미지가 수평으로만 반복된다.
+                  <p>background-repeat: repeat-x</p>
+                  <div class="ex_background bg_repeat_x"></div>
+                </li>
+                <li>
+                  <strong>repeat-y</strong> 배경 이미지가 수직으로만 반복된다.
+                  <p>background-repeat: repeat-y;</p>
+                  <div class="ex_background bg_repeat_y"></div>
+                </li>
+                <li>
+                  <strong>no-repeat</strong> 배경이미지가 반복되지 않는다.
+                  <p>background-repeat: no-repeat;</p>
+                  <div class="ex_background bg_repeat_no"></div>
+                </li>
+                <li>
+                  <strong>space</strong> 배경이미지가 잘리지 않을 최대한으로 반복된다. 처음과 마지막 이미지는 element 양쪽에 고정되며 공백은 이미지간에 분산된다.
+                  <p>background-repeat: space;</p>
+                  <div class="ex_background bg_repeat_space"></div>
+                </li>
+                <li>
+                  <strong>round</strong> 배경이미지가 공간을 채우기 위해 반복되고 찌그러지거나 늘어난다.
+                  <p>background-repeat: round;</p>
+                  <div class="ex_background bg_repeat_round"></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">6. background-origin</h3>
+                <p class="desc_property">
+                배경 이미지들의 시작 위치를 명시한다.
                 <br>
-                background-size: cover;
-                <div class="ex_background bg_size_cover"></div>
-              </li>
-              <li>
-                <strong>contain</strong> 배경 이미지의 크기를 조정하여 이미지가 완전히 보이도록 한다.
-                <br>
-                background-size: contain;
-                <div class="ex_background bg_size_contain"></div>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="name_keyword">5. background-repeat</h3>
-            <p class="desc_property">
-              어떻게 배경 이미지들을 반복할 지 명시한다.
-            </p>
-            <strong>Property Values</strong>
-            <ul class="property_values">
-              <li>
-                <strong>repeat(default)</strong> 수직으로 수평으로 모두 반복. 잘 맞지 않는다면 마지막 이미지는 잘릴 수 있음
-                <br>
-                background-repeat: repeat;
-                <div class="ex_background bg_repeat_repeat"></div>
-              </li>
-              <li>
-                <strong>repeat-x</strong> 배경 이미지가 수평으로만 반복된다.
-                <br>
-                background-repeat: repeat-x
-                <div class="ex_background bg_repeat_x"></div>
-              </li>
-              <li>
-                <strong>repeat-y</strong> 배경 이미지가 수직으로만 반복된다.
-                <br>
-                background-repeat: repeat-y;
-                <div class="ex_background bg_repeat_y"></div>
-              </li>
-              <li>
-                <strong>no-repeat</strong> 배경이미지가 반복되지 않는다.
-                <br>
-                background-repeat: no-repeat;
-                <div class="ex_background bg_repeat_no"></div>
-              </li>
-              <li>
-                <strong>space</strong> 배경이미지가 잘리지 않을 최대한으로 반복된다. 처음과 마지막 이미지는 element 양쪽에 고정되며 공백은 이미지간에 분산된다.
-                <br>
-                background-repeat: space;
-                <div class="ex_background bg_repeat_space"></div>
-              </li>
-              <li>
-                <strong>round</strong> 배경이미지가 공간을 채우기 위해 반복되고 찌그러지거나 늘어난다.
-                <br>
-                background-repeat: round;
-                <div class="ex_background bg_repeat_round"></div>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>background-origin: </strong>
-            배경 이미지들의 위치 영역을 명시한다.
-          </li>
-          <li>
-            <strong>background-clip: </strong>
-            배경 이미지를 칠할 영역을 명시한다.
-          </li>
-          <li>
-            <strong>background-attachment: </strong>
-            배경이미지가 고정되있는지 아니면 다른 페이지와 스크롤 될 지 결정한다.
-          </li>
-        </ul>
-      </div>
-      <div class="detail">
-        <h2 class="name_property">white-space</h3>
-        <p class="desc_property">
-          해당 엘리먼트 안의 공백이 어떻게 처리될지를 나타내는데 사용된다.
-        </p>
-        <strong>Property Values</strong>
-        <ul class="list_ws property_values">
-          <li>
-            <p>
-              <strong>normal: </strong>
-              연속된 공백이 하나로 병합. 소스 안의 줄바꿈 문자는 다른 공백 문자와 같이 취급된다. 필요에 따라 줄 바꿈함.
-            </p>
-            <p class="ex white-space">
-              여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
-              "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
-              "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>nowrap: </strong>
-              공백문자를 병합하지만, 텍스트 줄바꿈을 하지 않는다.
-            </p>
-            <p class="ex white-space nowrap">
-              여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
-              "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
-              "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>pre: </strong>
-              연속된 공백이 보존된다. 줄바꿈은 줄바꿈 문자나 < br > 요소에 의해서만 이뤄진다.
-            </p>
-            <p class="ex white-space pre">
-              여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
-              "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
-              "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>pre-wrap: </strong>
-              연속된 공백이 보존된다. 줄바꿈은 줄바꿈 문자, < br >, 줄 박스를 채우기 위해 필요에 따라 이뤄진다.
-            </p>
-            <p class="ex white-space pre-wrap">
-              여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
-              "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
-              "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>pre-line: </strong>
-              연속된 공백이 병합된다. 줄바꿈은 줄바꿈 문자, < br >, 줄 박스를 채우기 위해 필요에 따라 이뤄진다.
-            </p>
-            <p class="ex white-space pre-line">
-              여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
-              "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
-              "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
-            </p>
-          </li>
-          <li>
-            <strong>initial: </strong>
-            default value를 사용한다.
-          </li>
-        </ul>
-        <table class="pr-table">
-         <thead>
-          <tr>
-           <th> </th>
-           <th>New lines</th>
-           <th>Spaces and tabs</th>
-           <th>Text wrapping</th>
-          </tr>
-         </thead>
-         <tbody>
-          <tr>
-           <th><code>normal</code></th>
-           <td>Collapse</td>
-           <td>Collapse</td>
-           <td>Wrap</td>
-          </tr>
-          <tr>
-           <th><code>nowrap</code></th>
-           <td>Collapse</td>
-           <td>Collapse</td>
-           <td>No wrap</td>
-          </tr>
-          <tr>
-           <th><code>pre</code></th>
-           <td>Preserve</td>
-           <td>Preserve</td>
-           <td>No wrap</td>
-          </tr>
-          <tr>
-           <th><code>pre-wrap</code></th>
-           <td>Preserve</td>
-           <td>Preserve</td>
-           <td>Wrap</td>
-          </tr>
-          <tr>
-           <th><code>pre-line</code></th>
-           <td>Preserve</td>
-           <td>Collapse</td>
-           <td>Wrap</td>
-          </tr>
-         </tbody>
-        </table>
-      </div>
-      <div class="detail">
-        <h2 class="name_property">word-break</h3>
-        <p class="desc_property">
-          텍스트가 content box에서 overflow 될 때 브라우저가 줄바꿈을 삽입하여야 하는지를 명시한다.
-        </p>
-        <strong>Property Values</strong>
-        <ul class="property_values list_wb">
-          <li>
-            <p>
-              <strong>normal(initial): </strong>
-              default 줄바꿈 규칙을 적용
-            </p>
-            <p class="ex">
-              "Goodmorning,"saidthe fox.
-              "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing.
-              "Iamrighthere,"the voice said,"undertheappletree."
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>break-all: </strong>
-              overflow를 방지하기 위해서 어떤 두 개의 문자 사이에도 줄바꿈을 적용한다. (한국어, 일본어, 중국어 text 제외)
-            </p>
-            <p class="ex break_all">
-              "Goodmorning,"saidthe fox.
-              "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing.
-              "Iamrighthere,"the voice said,"undertheappletree."            </p>
-          </li>
-          <li>
-            <p>
-              <strong>keep-all: </strong>
-              스페이스나 탭 또는 엔터로 띄운 단어를 기준으로 줄바꿈을 적용. 띄어쓰기가 없다면 줄 바꿈이 되지 않는다.
-            </p>
-            <p class="ex keep_all">
-              "Goodmorning,"saidthe fox.
-              "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing.
-              "Iamrighthere,"the voice said,"undertheappletree."
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="detail">
-        <h2 class="name_property">word-wrap</h3>
-        <p class="desc_property">
-          텍스트 줄 바꿈 모드를 설정한다.
-        </p>
-        <strong>Property Values</strong>
-        <ul class="property_values list_ww">
-          <li list_ww>
-            <p>
-              <strong>normal: </strong>
-              기본값으로 내용(contents)가 컨테이너 경계를 초과한다.
-            </p>
-            <p class="ex noraml">
-              "Goodmorning,"saidthe fox. "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing."Iamrighthere,"thevoicesaid,"undertheappletree."
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>break-word: </strong>
-              content가 다음 줄로 넘어가고 필요한 경우 단어 줄 바꿈이 발생.
-            </p>
-            <p class="ex break_word">
-              "Goodmorning,"saidthe fox. "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing."Iamrighthere,"the voice said,"undertheappletree."
-            </p>
-          </li>
-        </ul>
-      </div>
-    </main>
+                background-attachment가 fixed일 때는 아무 효과가 없음.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <strong>padding-box (default)</strong> padding edge의 왼쪽 위 코너부터 배경이미지가 시작된다.
+                  <p>background-origin: padding-box;</p>
+                  <div class="ex_background bg_origin_pb"></div>
+                </li>
+                <li>
+                  <strong>border-box</strong> border의 왼쪽 위 코너부터 배경이미지가 시작된다.
+                  <p>background-origin: border-box</p>
+                  <div class="ex_background bg_origin_bb"></div>
+                </li>
+                <li>
+                  <strong>content-box</strong> content의 왼쪽 위 코너부터 배경이미지가 시작된다.
+                  <p>background-repeat: content-box;</p>
+                  <div class="ex_background bg_origin_cc"></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">7. background-clip</h3>
+                <p class="desc_property">
+                  배경이 요소내에서 어느 정도 확장되어야 하는지 명시한다.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <strong>border-box (default)</strong> border 뒤쪽으로 배경이 확장된다.
+                  <p>background-clip: border-box;</p>
+                  <div class="ex_background bg_clip_bb"></div>
+                </li>
+                <li>
+                  <strong>padding-box</strong> border edge의 안쪽으로 배경이 확장된다.
+                  <p>background-clip: padding-box</p>
+                  <div class="ex_background bg_clip_pb"></div>
+                </li>
+                <li>
+                  <strong>content-box</strong> context box의 edge 쪽으로 배경이 확장된다.
+                  <p>background-clip: content-box;</p>
+                  <div class="ex_background bg_clip_cb"></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class="name_keyword">8. background-attachment</h3>
+              <p class="desc_property">
+                배경이미지가 고정되있는지 아니면 다른 페이지와 스크롤 될 지 결정한다.
+              </p>
+              <strong>Property Values</strong>
+              <ul class="property_values">
+                <li>
+                  <strong>scroll (default)</strong> 배경 이미지는 page와 함께 scroll 된다.
+                  <p>background-attachment: scroll;</p>
+                </li>
+                <li>
+                  <strong>padding-box</strong> 배경이미지는 page와 scoll되지 않는다.
+                  <p>background-attachment: fixed;</p>
+                </li>
+                <li>
+                  <strong>local</strong> 배경이미지는 element의 contents와 함께 scroll 된다.
+                  <p>background-attachment: local;</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="detail">
+          <h2 class="name_property" id="white-space">white-space</h2>
+          <p class="desc_property">
+            해당 엘리먼트 안의 공백이 어떻게 처리될지를 나타내는데 사용된다.
+          </p>
+          <strong>Property Values</strong>
+          <ul class="list_ws property_values">
+            <li>
+              <p>
+                <strong>normal: </strong>
+                연속된 공백이 하나로 병합. 소스 안의 줄바꿈 문자는 다른 공백 문자와 같이 취급된다. 필요에 따라 줄 바꿈함.
+              </p>
+              <p class="ex white-space">
+                여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
+                "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
+                "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>nowrap: </strong>
+                공백문자를 병합하지만, 텍스트 줄바꿈을 하지 않는다.
+              </p>
+              <p class="ex white-space nowrap">
+                여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
+                "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
+                "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>pre: </strong>
+                연속된 공백이 보존된다. 줄바꿈은 줄바꿈 문자나 &lt;br> 요소에 의해서만 이뤄진다.
+              </p>
+              <p class="ex white-space pre">
+                여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
+                "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
+                "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>pre-wrap: </strong>
+                연속된 공백이 보존된다. 줄바꿈은 줄바꿈 문자, &lt;br>, 줄 박스를 채우기 위해 필요에 따라 이뤄진다.
+              </p>
+              <p class="ex white-space pre-wrap">
+                여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
+                "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
+                "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>pre-line: </strong>
+                연속된 공백이 병합된다. 줄바꿈은 줄바꿈 문자, &lt;br>, 줄 박스를 채우기 위해 필요에 따라 이뤄진다.
+              </p>
+              <p class="ex white-space pre-line">
+                여우가 나타난 것은 바로 그때였다. "안녕." 여우가 말했다. "안녕." 어린 왕자가 얌전히 대답하고 몸을 돌렸으나 아무것도 보이지 않았다.
+                "난 여기 사과나무 밑에 있어." 좀 전의 그 목소리가 말했다. "넌 누구지? 넌 참 예쁘구나." 어린 왕자가 말했다. "난 여우야." 여우는 말했다.
+                "이라 와서 나하고 놀자. 난 아주 슬프단다." 어린 왕자가 제의했다. "난 너하고 놀 수 없어. 나는 길들어져 있지 않거든." 여우가 말했다.
+              </p>
+            </li>
+            <li>
+              <strong>initial: </strong>
+              default value를 사용한다.
+            </li>
+          </ul>
+          <table class="pr-table">
+           <thead>
+            <tr>
+             <th> </th>
+             <th>New lines</th>
+             <th>Spaces and tabs</th>
+             <th>Text wrapping</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <th><code>normal</code></th>
+             <td>Collapse</td>
+             <td>Collapse</td>
+             <td>Wrap</td>
+            </tr>
+            <tr>
+             <th><code>nowrap</code></th>
+             <td>Collapse</td>
+             <td>Collapse</td>
+             <td>No wrap</td>
+            </tr>
+            <tr>
+             <th><code>pre</code></th>
+             <td>Preserve</td>
+             <td>Preserve</td>
+             <td>No wrap</td>
+            </tr>
+            <tr>
+             <th><code>pre-wrap</code></th>
+             <td>Preserve</td>
+             <td>Preserve</td>
+             <td>Wrap</td>
+            </tr>
+            <tr>
+             <th><code>pre-line</code></th>
+             <td>Preserve</td>
+             <td>Collapse</td>
+             <td>Wrap</td>
+            </tr>
+           </tbody>
+          </table>
+        </div>
+        <div class="detail">
+          <h2 class="name_property" id="word-break">word-break</h2>
+          <p class="desc_property">
+            텍스트가 content box에서 overflow 될 때 브라우저가 줄바꿈을 삽입하여야 하는지를 명시한다.
+          </p>
+          <strong>Property Values</strong>
+          <ul class="property_values list_wb">
+            <li>
+              <p>
+                <strong>normal(initial): </strong>
+                default 줄바꿈 규칙을 적용
+              </p>
+              <p class="ex">
+                "Goodmorning,"saidthe fox.
+                "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing.
+                "Iamrighthere,"the voice said,"undertheappletree."
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>break-all: </strong>
+                overflow를 방지하기 위해서 어떤 두 개의 문자 사이에도 줄바꿈을 적용한다. (한국어, 일본어, 중국어 text 제외)
+              </p>
+              <p class="ex break_all">
+                "Goodmorning,"saidthe fox.
+                "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing.
+                "Iamrighthere,"the voice said,"undertheappletree."            </p>
+            </li>
+            <li>
+              <p>
+                <strong>keep-all: </strong>
+                스페이스나 탭 또는 엔터로 띄운 단어를 기준으로 줄바꿈을 적용. 띄어쓰기가 없다면 줄 바꿈이 되지 않는다.
+              </p>
+              <p class="ex keep_all">
+                "Goodmorning,"saidthe fox.
+                "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing.
+                "Iamrighthere,"the voice said,"undertheappletree."
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="detail">
+          <h2 class="name_property" id="word-wrap">word-wrap</h2>
+          <p class="desc_property">
+            텍스트 줄 바꿈 모드를 설정한다.
+          </p>
+          <strong>Property Values</strong>
+          <ul class="property_values list_ww">
+            <li class="list_ww">
+              <p>
+                <strong>normal: </strong>
+                기본값으로 내용(contents)가 컨테이너 경계를 초과한다.
+              </p>
+              <p class="ex noraml">
+                "Goodmorning,"saidthe fox. "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing."Iamrighthere,"thevoicesaid,"undertheappletree."
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>break-word: </strong>
+                content가 다음 줄로 넘어가고 필요한 경우 단어 줄 바꿈이 발생.
+              </p>
+              <p class="ex break_word">
+                "Goodmorning,"saidthe fox. "Good morning,"thelittleprincerespondedpolitely,althoughwhenheturnedaroundhesawnothing."Iamrighthere,"the voice said,"undertheappletree."
+              </p>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,4 +1,6 @@
-a, h1, h2, h3, h4, h5, h6, p, li, ul, ol, body { margin: 0; padding: 0 }
+a, h1, h2, h3, h4, h5, h6, p, li, ul, ol, body, td, tr { margin: 0; padding: 0 }
+table { border-spacing: 0; }
+body { background-color: #f2f4f7; }
 ul {list-style: none; }
 em {font-style: normal; }
 a, span, h1, h2, h3, h4, h5, h6, p, span, em, strong {
@@ -8,4 +10,252 @@ a, span, h1, h2, h3, h4, h5, h6, p, span, em, strong {
 
 a, span, p, span, em, strong {
   font-size: 14px;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.list_overflow li {
+  margin-bottom: 10px;
+}
+.title {
+  float: left;
+  line-height: 100px;
+  text-align: center;
+  width: 200px;
+  color: white;
+}
+.nav_pr {
+  background: #00c73c;
+  position: fixed;
+}
+.nav_pr::after {
+  content: "";
+  clear: left;
+  display: block;
+}
+.property {
+  padding: 100px 0;
+  background: #fff;
+}
+.property .ex {
+  display: inline-block;
+  width: 600px;
+  height: 50px;
+  background-color: rgb(230,230,230);
+  margin: 10px 0;
+}
+.property .ex_background {
+  width: 200px;
+  height: 200px;
+  line-height: 100px;
+  text-align: center;
+  margin: 10px 0;
+}
+.property .color_name {
+  background-color: red;
+}
+.property .color_hex {
+  background-color: #ff0000;
+}
+.property .color_rgb {
+  background-color: rgb(255,0,0);
+}
+.property .bg_img {
+  background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
+}
+.property .bg_pos1 {
+  background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
+  background-position: left top;
+  background-repeat:no-repeat;
+}
+.property .bg_pos2 {
+  background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
+  background-position: 50% 50%;
+  background-repeat:no-repeat;
+}
+.property .bg_pos3 {
+  background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
+  background-position: 50px 100px;
+  background-repeat:no-repeat;
+}
+.property .bg_size_auto {
+  background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
+  background-repeat:no-repeat;
+}
+.property .bg_size_length {
+  background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
+  background-size: 50px 50px;
+  background-repeat:no-repeat;
+}
+.property .bg_size_percent {
+  background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
+  background-size: 200% 200%;
+  background-repeat:no-repeat;
+}
+.property .bg_size_cover {
+  background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+.property .bg_size_contain {
+  background-image: url("https://findicons.com/files/icons/2770/ios_7_icons/100/star.png");
+  background-size: contain;
+  background-repeat:no-repeat;
+}
+.property .bg_repeat_repeat {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
+  background-repeat: repeat;
+}
+.property .bg_repeat_x {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
+  background-repeat: repeat-x;
+}
+.property .bg_repeat_y {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
+  background-repeat: repeat-y;;
+}
+.property .bg_repeat_no {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
+  background-repeat: no-repeat;
+}
+.property .bg_repeat_space {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
+  background-repeat: space;
+}
+.property .bg_repeat_round {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
+  background-repeat: round;
+}
+.property .bg_origin_pb {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  border: 10px double yellow;
+  padding: 25px;
+}
+.property .bg_origin_bb {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  border: 10px double yellow;
+  padding: 25px;
+}
+.property .bg_origin_cc {
+  background-image: url("https://cdn4.iconfinder.com/data/icons/sushi-icons/96/Girl-128.png");
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  border: 10px double yellow;
+  padding: 25px;
+}
+.property .bg_clip_bb {
+  padding: 10px;
+  border: 10px dotted #000000;
+  background-color: yellow;
+  background-clip: border-box;
+}
+
+.property .bg_attachment_fixed {
+  padding: 10px;
+  border: 10px dotted #000000;
+  background-color: yellow;
+  background-clip: border-box;
+}
+
+.property .bg_clip_pb {
+  padding: 10px;
+  border: 10px dotted #000000;
+  background-color: yellow;
+  background-clip: padding-box;
+}
+
+.property .bg_clip_cb {
+  padding: 10px;
+  border: 10px dotted #000000;
+  background-color: yellow;
+  background-clip: content-box;
+}
+.property .white-space{
+  overflow: auto;
+}
+.property .detail {
+  padding: 5px 10px;
+}
+.property .detail .name_property {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.property .detail .desc_property {
+  background-color: #e4f0f5;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-weight: 400;
+
+}
+.property .detail .property_values {
+  margin: 5px 10px;
+}
+.property .detail .list_keyword {
+    padding: 10px 20px;
+}
+.property .detail .list_keyword .name_keyword{
+  font-size: 20px;
+  margin: 10px 0;
+}
+.property .list_wb .break_all {
+  word-break: break-all;
+}
+.property .list_wb .keep_all {
+  word-break: keep-all;
+}
+.property .list_overflow .hidden {
+  overflow: hidden;
+}
+.property .list_overflow .auto {
+  overflow: auto;
+}
+.property .list_overflow .scroll {
+  overflow: scroll;
+}
+.property .list_ws .nowrap {
+  white-space: nowrap;
+}
+.property .list_ws .pre {
+  white-space: pre;
+}
+.property .list_ws .pre-wrap {
+  white-space: pre-wrap;
+}
+.property .list_ws .pre-line {
+  white-space: pre-line;
+}
+.property .list_ww .break_word {
+  word-wrap: break-word;
+}
+.property .list_ww .normal {
+  word-wrap: normal;
+}
+.property .display_table {
+  display: table;
+  margin-bottom: 15px;
+}
+.property .display_table .display_th {
+  display: table-header-group;
+}
+.property .display_table .display_tf {
+  display: table-footer-group;
+}
+.property .display_table .display_tb {
+  display: table-row-group;
+}
+.property .display_table .display_tr {
+  display: table-row;
+}
+.property .display_table .display_td {
+  display: table-cell;
+  border: 1px solid #bcbcbc;
+}
+.property .table_ex td {
+  border: 1px solid #bcbcbc;
 }
