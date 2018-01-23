@@ -16,7 +16,12 @@
             <div class="aside_top"><h2>Aside Top</h2></div>
             <div class="aside_area">
               <h2>Aside area</h2>
-              <a href="#hw1">hw1</a>
+              <div>
+                <a href="#hw1">hw1</a>
+              </div>
+              <div>
+                <a href="#hw2">hw2</a>
+              </div>
             </div>
             <div class="aside_bottom"><h2>Aside Bottom</h2></div>
           </div>
@@ -131,7 +136,7 @@
                 <div class="banner">
                   배너 영역 입니다.
                 </div>
-              </div> -->
+              </div>
               <div class="wrapper_hw2" id="hw2">
                 <h1 class="title_table">걸어온 길</h1>
                 <table class="table">
@@ -415,6 +420,227 @@
                     </tr>
                   </tbody>
                 </table>
+              </div> -->
+              <div class="wrapper_hw3" id="hw3">
+                <form class="form" action="" method="get">
+                  <fieldset class="fieldset">
+                    <legend class="blind">검색어</legend>
+                    <div class="section">
+                      <strong class="title_field">검색어</strong>
+                      <div class="content_field">
+                        <div class="content_detail">
+                          <div class="radio_wrap">
+                            <div class="custom_radio">
+                              <span class="radio_on"></span>
+                              <input type="radio" name="key" value="" class="blind" id="pnum">
+                              <label for="pnum">원상품번호</label>
+                            </div>
+                            <div class="custom_radio">
+                              <span class="radio_off"></span>
+                              <input type="radio" name="key" value="" class="blind" id="snum">
+                              <label for="snum">판매자상품코드</label>
+                            </div>
+                          </div>
+                          <textarea name="name" rows="3" cols="20" class="area_search" placeholder="복수 검색"></textarea>
+                        </div>
+                        <div class="content_detail">
+                          <div class="text_wrap">
+                            <label for="pname">상품명</label>
+                            <input type="text" name="keyword" value="" id="pname" class="input_txt">
+                          </div>
+                          <div class="text_wrap">
+                            <label for="mname">모델명</label>
+                            <input type="text" name="keyword" value="" id="mname" class="input_txt">
+                          </div>
+                        </div>
+                        <div class="content_detail">
+                          <div class="text_wrap">
+                            <label for="cname">제조사명</label>
+                            <input type="text" name="" value="" id="cname" class="input_txt">
+                          </div>
+                          <div class="text_wrap">
+                            <label for="bname">브랜드명</label>
+                            <input type="text" name="" value="" id="bname" class="input_txt">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="fieldset">
+                    <legend class="blind">판매상태</legend>
+                    <div class="section">
+                      <strong class="title_field">검색어</strong>
+                      <div class="content_field">
+                        <div class="check_wrap">
+                          <input type="checkbox" name="status" value="all" class="blind" id="all">
+                          <span class="check_off"></span>
+                          <label for="all" class="desc_option">전체</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="status" value="wait_sale" class="blind" id="wait_sale">
+                          <span class="check_off"></span>
+                          <label for="wait_sale" class="desc_option">판매대기</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="status" value="on_sale" checked class="blind" id="on_sale">
+                          <span class="check_on"></span>
+                          <label for="on_sale" class="desc_option">판매중</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="status" value="soldout" class="blind" id="soldout">
+                          <span class="check_off"></span>
+                          <label for="soldout" class="desc_option">품절</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="status" value="wait_appr" class="blind" id="wait_appr">
+                          <span class="check_off"></span>
+                          <label for="wait_appr" class="desc_option">승인대기</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="status" value="stop_sale" class="blind" id="stop_sale">
+                          <span class="check_off"></span>
+                          <label for="stop_sale" class="desc_option">판매중지</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="status" value="exit_sale" class="blind" id="exit_sale">
+                          <span class="check_off"></span>
+                          <label for="exit_sale" class="desc_option">판매종료</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="status" value="ban_sale" class="blind" id="ban_sale">
+                          <span class="check_off"></span>
+                          <label for="ban_sale" class="desc_option">판매금지</label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="fieldset">
+                    <legend class="blind">카테고리</legend>
+                    <div class="section">
+                      <strong class="title_field">카테고리</strong>
+                      <div class="content_field">
+                        <span class="custom_select">
+                          대분류
+                          <span class="arw_off"></span>
+                        </span>
+                        <span class="custom_select">
+                          중분류
+                          <span class="arw_off"></span>
+                        </span>
+                        <span class="custom_select">
+                          소분류
+                          <span class="arw_off"></span>
+                        </span>
+                        <span class="custom_select">
+                          세분류
+                          <span class="arw_off"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="fieldset">
+                    <legend class="blind">채널</legend>
+                    <div class="section">
+                      <strong class="title_field">검색어</strong>
+                      <div class="content_field">
+                        <div class="check_wrap">
+                          <input type="checkbox" name="channel" value="all" class="blind" id="c_all">
+                          <span class="check_off"></span>
+                          <label for="c_all">전체</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="channel" value="farm" class="blind" id="c_farm">
+                          <span class="check_off"></span>
+                          <label for="c_farm">스토어팜</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="channel" value="window" class="blind" id="c_window">
+                          <span class="check_off"></span>
+                          <label for="c_window">윈도</label>
+                        </div>
+                        <div class="check_wrap">
+                          <input type="checkbox" name="channel" value="band" class="blind" id="c_band">
+                          <span class="check_on"></span>
+                          <label for="c_band">밴드기프트샵</label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="fieldset">
+                    <legend class="blind">결제여부</legend>
+                    <div class="section payment">
+                      <strong class="title_field">검색어</strong>
+                      <div class="content_field">
+                        <div class="radio_wrap">
+                          <span class="radio_on"></span>
+                          <input type="radio" name="key" value="" class="blind" id="p_all">
+                          <label for="p_all">전체</label>
+                        </div>
+                        <div class="radio_wrap">
+                          <span class="radio_off"></span>
+                          <input type="radio" name="key" value="" class="blind" id="p_pay">
+                          <label for="p_pay">결제상품(pay)</label>
+                        </div>
+                        <div class="radio_wrap">
+                          <span class="radio_off"></span>
+                          <input type="radio" name="key" value="" class="blind" id="p_npay">
+                          <label for="p_npay">무결제상품(Non-pay)</label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="fieldset">
+                    <legend class="blind">기간</legend>
+                    <div class="section">
+                      <strong class="title_field">기간</strong>
+                      <div class="content_field">
+                        <span class="custom_select regi_select">
+                          대분류
+                          <span class="arw_on"></span>
+                        </span>
+                        <div class="wrap_regi">
+                          <input type="radio" name="day_regi" value="" class="blind" id="today">
+                          <label for="today" class="regi_selector">
+                            <button type="button" name="button">오늘</button>
+                          </label>
+                          <input type="radio" name="day_regi" value="" class="blind" id="a_week">
+                          <label for="a_week" class="regi_selector">
+                            <button type="button">1주</button>
+                          </label>
+                          <input type="radio" name="day_regi" value="" class="blind" id="a_month">
+                          <label for="a_month" class="regi_selector selected_label">
+                            <button type="button" class="selected_button">1개월</button>
+                          </label>
+                          <input type="radio" name="day_regi" value="" class="blind" id="three_month">
+                          <label for="three_month" class="regi_selector">
+                            <button type="button">3개월</button>
+                          </label>
+                          <input type="radio" name="day_regi" value="" class="blind" id="six_month">
+                          <label for="six_month" class="regi_selector">
+                            <button type="button">6개월</button>
+                          </label>
+                          <input type="radio" name="day_regi" value="" class="blind" id="a_year">
+                          <label for="a_year" class="regi_selector">
+                            <button type="button">1년</button>
+                          </label>
+                        </div>
+                        <div class="date_picker">
+                          <input type="text" name="" value="2016.06.11." class="input_txt">
+                          <button type="button" name="button" class="calendar"></button>
+                        </div>
+                        <span>~</span>
+                        <div class="date_picker">
+                          <input type="text" name="" value="2016.07.11." class="input_txt">
+                          <button type="button" name="button" class="calendar"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="area_button">
+                    <button>초기화</button>
+                    <button>검색</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

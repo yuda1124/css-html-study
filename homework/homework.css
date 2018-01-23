@@ -1,13 +1,20 @@
 @charset "UTF-8";
 body, html { height: 100%; }
-a, h1, h2, h3, h4, h5, h6, p, li, ul, body, td, th, tr { margin: 0; padding: 0 }
+a, h1, h2, h3, h4, h5, h6, p, li, ul, body, td, th, tr, span, label, fieldset { margin: 0; padding: 0 }
 a, span, h1, h2, h3, h4, h5, h6, span, strong {
   font-family: dotum, '돋음', sans-serif;
   color: #000;
   font-size: 16px;
 }
+form, fieldset {
+  border: 0;
+}
 a:link {
   text-decoration: none;
+}
+button {
+  background-color: #fff;
+  border: 0;
 }
 table {
   table-layout: fixed;
@@ -214,6 +221,9 @@ em {font-style: normal; }
 .wrapper_hw2 .line_top {
   border-top: 1px solid #A9A9A9;
 }
+.wrapper_hw2 .inner_div {
+
+}
 
 .wrapper_hw2 .th_age {
   height: 0;
@@ -279,6 +289,7 @@ em {font-style: normal; }
 }
 
 .wrapper_hw2 .line_bottom {
+  border-bottom: 1px solid #A9A9A9;
   padding-bottom: 100px;
   height: 200px;
 }
@@ -286,4 +297,153 @@ em {font-style: normal; }
 .wrapper_hw2 .arrow {
   font-weight: bold;
   color: #000;
+}
+.wrapper_hw3 {
+  background-color: #DCDCDC;
+  padding: 10px 10px 40px 10px;
+}
+.wrapper_hw3 .form {
+  background-color: #F0F8FF;
+}
+.wrapper_hw3 .fieldset {
+  padding: 0 20px;
+}
+.wrapper_hw3 .section {
+  border-bottom: 1px solid #333;
+  padding: 15px 0;
+}
+.wrapper_hw3 .section:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.wrapper_hw3 .title_field {
+  float: left;
+  width: 100px;
+}
+.wrapper_hw3 .content_field {
+  overflow: hidden;
+}
+.wrapper_hw3 .content_detail {
+  display: inline-block;
+  margin-right: 10px;
+}
+.wrapper_hw3 .radio_wrap {
+  display: inline-block;
+  margin-right: 5px;
+}
+.wrapper_hw3 .payment .radio_wrap {
+  margin-right: 15px;
+}
+.wrapper_hw3 .radio_off {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url("image/form/ico_radio_off.png");
+  margin-bottom: -5px;
+}
+.wrapper_hw3 .radio_on {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url("image/form/ico_radio_on.png");
+  margin-bottom: -5px;
+}
+.wrapper_hw3 .check_on {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url("image/form/ico_checkbox_on.png");
+  margin-bottom: -5px;
+}
+.wrapper_hw3 .check_off {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url("image/form/ico_checkbox_off.png");
+  margin-bottom: -5px;
+}
+.wrapper_hw3 .check_wrap {
+  margin-bottom: 5px;
+  margin-right: 20px;
+  display: inline-block;
+}
+.wrapper_hw3 .custom_radio {
+  margin-bottom: 5px;
+}
+.wrapper_hw3 .text_wrap {
+  margin-bottom: 10px;
+}
+.wrapper_hw3 .custom_select {
+  display: inline-block;
+  background-color: #fff;
+  width: 150px;
+  padding: 5px 0;
+  text-indent: 5px;
+  position: relative;
+  border: 1px solid #D3D3D3;
+}
+
+.wrapper_hw3 .input_txt {
+  background-color: #fff;
+  width: 150px;
+  padding: 5px 0;
+  text-indent: 5px;
+  border: 1px solid #D3D3D3;
+}
+
+.wrapper_hw3 .arw_off {
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  right: 10px;
+  background-image: url("image/form/ico_arw_off.png");
+  top: 10px;
+}
+.wrapper_hw3 .regi_select {
+  width: 100px;
+}
+.wrapper_hw3 .arw_on {
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  right: 10px;
+  background-image: url("image/form/ico_arw_on.png");
+  top: 10px;
+}
+.wrapper_hw3 .regi_selector {
+  background-color: #fff;
+  padding: 2px 5px;
+  border: 1px solid #333;
+}
+.wrapper_hw3 .wrap_regi {
+  margin: 0 10px;
+  display: inline-block;
+}
+.wrapper_hw3 .calendar {
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+  background-position: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-image: url("image/form/btn_calendar.png");
+  margin-left: -4px;
+  margin-bottom: -8px;
+}
+.wrapper_hw3 .area_button {
+  background-color: #fff;
+}
+.wrapper_hw3 .title_field {
+  color: #C0C0C0;
+  margin-right: 30px;
+}
+.wrapper_hw3 .selected_label {
+  border: 2px solid #32CD32;
+}
+.wrapper_hw3 .selected_button {
+  color: #32CD32;
+}
+.wrapper_hw3 .date_picker {
+  display: inline;
 }
