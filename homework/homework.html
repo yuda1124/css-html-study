@@ -441,7 +441,7 @@
                               <label for="snum">판매자상품코드</label>
                             </div>
                           </div>
-                          <textarea name="name" rows="3" cols="20" class="area_search" placeholder="복수 검색"></textarea>
+                          <textarea name="name" class="search_area" rows="4" cols="20" class="area_search" placeholder="복수 검색&#13;&#10;(enter 또는 &#34;,&#34;로 구분)"></textarea>
                         </div>
                         <div class="content_detail">
                           <div class="text_wrap">
@@ -469,7 +469,7 @@
                   <fieldset class="fieldset">
                     <legend class="blind">판매상태</legend>
                     <div class="section">
-                      <strong class="title_field">검색어</strong>
+                      <strong class="title_field">판매상태</strong>
                       <div class="content_field">
                         <div class="check_wrap">
                           <input type="checkbox" name="status" value="all" class="blind" id="all">
@@ -593,11 +593,17 @@
                     <legend class="blind">기간</legend>
                     <div class="section">
                       <strong class="title_field">기간</strong>
+                      <span class="custom_select regi_select">
+                        상품등록일
+                        <span class="arw_on"></span>
+                        <ul class="options">
+                          <li>상품등록일</li>
+                          <li>판매시작일</li>
+                          <li>판매종료일</li>
+                          <li>최종수정일</li>
+                        </ul>
+                      </span>
                       <div class="content_field">
-                        <span class="custom_select regi_select">
-                          대분류
-                          <span class="arw_on"></span>
-                        </span>
                         <div class="wrap_regi">
                           <input type="radio" name="day_regi" value="" class="blind" id="today">
                           <label for="today" class="regi_selector">
@@ -637,8 +643,8 @@
                     </div>
                   </fieldset>
                   <div class="area_button">
-                    <button>초기화</button>
-                    <button>검색</button>
+                    <button type="reset" class="button_reset">초기화</button>
+                    <button type="submit" class="button_search">검색</button>
                   </div>
                 </form>
               </div>
