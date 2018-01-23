@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body, html { height: 100%; }
 a, h1, h2, h3, h4, h5, h6, p, li, ul, body, td, th, tr, span, label, fieldset { margin: 0; padding: 0 }
-a, span, h1, h2, h3, h4, h5, h6, span, strong, label {
+a, span, h1, h2, h3, h4, h5, h6, span, strong, label, div {
   font-family: dotum, '돋음', sans-serif;
   color: #444;
   font-size: 14px;
@@ -488,4 +488,28 @@ em {font-style: normal; }
 .wrapper_hw3 .search_area {
   vertical-align: top;
   border: 1px solid #D3D3D3
+}
+
+.wrapper_hw4 .thumb {
+  width:80px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.wrapper_hw4 .text {
+  width:100%;
+  margin-right:-100px;
+  padding-right:100px;
+  display:inline-block;
+  vertical-align:middle;
+  box-sizing:border-box;
+}
+.wrapper_hw4 .centered {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wrapper_hw4 .wrap {
+  width: 400px;
+  min-height: 80px;
+  border: 1px solid black;
+  position: relative;
 }
