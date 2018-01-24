@@ -398,7 +398,6 @@ em {font-style: normal; }
   border: 1px solid #D3D3D3;
 }
 .wrapper_hw3 .input_txt:focus {
-  outline: none !important;
   border: 1px solid #32CD32;
 }
 
@@ -512,4 +511,62 @@ em {font-style: normal; }
   min-height: 80px;
   border: 1px solid black;
   position: relative;
+}
+.wrapper_hw6 .container {
+  width: 600px;
+  height: 300px;
+  border: 1px solid #000;
+  position: relative;
+}
+.wrapper_hw6 .dummy {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+  float: right;
+  position: relative;
+  margin-top: 3px;
+}
+.wrapper_hw6 .arrow {
+  position: absolute;
+  width: 9px;
+  height: 6px;
+  bottom: -11px;
+  right: -10px;
+  z-index: 1;
+}
+.wrapper_hw6 .setting_area {
+  float: right;
+  margin-right: 30px;
+}
+.wrapper_hw6 .block {
+  display: inline-block;
+  background-color: #f00;
+  width: 10px;
+  height: 10px;
+}
+.wrapper_hw6 .tooltip_box {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  right: 5px;
+  top: 23px;
+  padding: 20px 20px;
+  background-color: #fdfadc;
+  border: 1px solid #f0ebcf;
+}
+.wrapper_hw6 .blank {
+  content: '';
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+  display: inline-block;
+}
+.wrapper_hw6 .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.wrapper_hw6 .inner_text {
+  display: inline-block;
+  vertical-align: middle;
 }
