@@ -28,6 +28,12 @@
               <div>
                 <a href="#hw4">hw4</a>
               </div>
+              <div>
+                <a href="#hw6">hw6</a>
+              </div>
+              <div>
+                <a href="#hw8">hw8</a>
+              </div>
             </div>
             <div class="aside_bottom"><h2>Aside Bottom</h2></div>
           </div>
@@ -447,7 +453,7 @@
                               <label for="snum">판매자상품코드</label>
                             </div>
                           </div>
-                          <textarea name="name" class="search_area" rows="4" cols="20" placeholder="복수 검색&#13; &#10;(enter 또는 &#34;,&#34;로 구분)"></textarea>
+                          <textarea name="name" class="search_area" title="복수검색" rows="4" cols="20" placeholder="복수 검색&#13; &#10;(enter 또는 &#34;,&#34;로 구분)"></textarea>
                         </div>
                         <div class="content_detail">
                           <div class="text_wrap">
@@ -522,13 +528,21 @@
                   </fieldset>
                   <fieldset class="fieldset">
                     <legend class="blind">카테고리</legend>
-                    <div class="section">
-                      <strong class="title_field">카테고리</strong>
-                      <div class="content_field">
-                        <span class="custom_select">
+                    <div class="section_cate">
+                      <div class="title_cate">
+                        <strong>카테고리</strong>
+                      </div>
+                      <div class="content_cate">
+                        <div class="custom_select">
                           대분류
                           <span class="arw_off"></span>
-                        </span>
+                          <ul class="options">
+                            <li>상품등록일</li>
+                            <li>판매시작일</li>
+                            <li>판매종료일</li>
+                            <li>최종수정일</li>
+                          </ul>
+                        </div>
                         <span class="custom_select">
                           중분류
                           <span class="arw_off"></span>
@@ -656,31 +670,134 @@
               </div>
               <div class="wrapper_hw4" id="hw4">
                 <div class="wrap">
-                  <div class="centered">
-                    <img src="https://placehold.it/80x80" alt="원숭이" class="thumb">
-                    <span class="text">동해물과 백두산이 동해물과 백두산이 동해물과 백두산이 동해물과 백두산이 동해물과 백두산이 동해물과 백두산이 동해물과 백두산이</span>
+                  <div class="centered_img">
+                    <img src="https://placehold.it/80x80" alt="" class="thumb" width="80" height="80">
+                  </div>
+                  <div class="centered"><span class="text">동해물과 백두산이 동해물과 백두산이 동해물과 백두산이 동해물과 백두산이 동해물과 백두산이 동해물과 백두산이 동해물과 백두산이</span>
                   </div>
                 </div>
 
               </div>
-              <!-- 닫기를 누르면 toggle class를 안 보이게 처리해주시면 됩니다. blind css 참고 -->
               <div class="wrapper_hw6" id="hw6">
                 <div class="container">
                   <div class="setting_area">
-                    <span class="block"></span>
-                    <span>설정</span>
+                    <div>
+                      <span class="block"></span>
+                      <span>설정</span>
+                    </div>
+                    <div class="tooltip_wrap">
+                      <img src="image/arrow.png" alt="" class="arrow" height="5" width="5">
+                      <div class="tooltip_box">
+                        <!-- tooltip_box를 끄려면 tooltip_box 뒤에 hidden을 붙여주면 됩니다. -->
+                        <span class="blank"></span><p class="inner_text">
+                          툴팁 내용입니다. 툴팁내용입니다. 툴팁 내용입니다.
+                          툴팁 내용입니다. 툴팁내용입니다. 툴팁 내용입니다.
+                          툴팁 내용입니다. 툴팁내용입니다. 툴팁 내용입니다.
+                          툴팁 내용입니다. 툴팁내용입니다. 툴팁 내용입니다.
+                        </p>
+                        <button href="#" class="close">닫기</button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="dummy toggle">
-                    <img src="image/arrow.png" alt="" class="arrow">
+                </div>
+              </div>
+              <div class="wrapper_hw8" id="hw8">
+                <div class="container">
+                  <div class="section">
+                    <div class="wrap_info">
+                      <div class="info_user">
+                        <img src="image/profile.png" width="43" height="43" alt="프로필 이미지" class="profile">
+                        <div class="info_text">
+                          <strong class="unick">닉네임닉네임</strong>
+                          <span class="date">2017. 7. 14.</span>
+                        </div>
+                      </div>
+                      <a href="#" class="link_title">
+                        <h2 class="title_info">덥고 습한 여름 인테리어 초록식물 공간별 연출법</h2>
+                      </a>
+                      <a href="#" class="link_desc">
+                        <p class="desc_info">
+                          여름이라는 말에 걸맞게 조금만 움직여도 온몸에서 끈적거리는 땀이 흘러내리네요. 초록식물을 보고 있으니 조금은 체감온도가
+                          낮아지는 기분이 들지 않나요? 장소와 관계없이 소박하지만 존재감 있게, 작지만 쾌적하게 해 줄 초록화분 연출법이라는 생각
+                          이 들어요. 도움되시는 자료 되셨길요~
+                        </p>
+                      </a>
+                      <span class="count_sym">공감 50</span>
+                    </div>
                   </div>
-                  <div class="tooltip_box toggle">
-                      <span class="blank"></span><p class="inner_text">
-                        툴팁 내용입니다. 툴팁내용입니다. 툴팁 내용입니다.
-                        툴팁 내용입니다. 툴팁내용입니다. 툴팁 내용입니다.
-                        툴팁 내용입니다. 툴팁내용입니다. 툴팁 내용입니다.
-                        툴팁 내용입니다. 툴팁내용입니다. 툴팁 내용입니다.
-                      </p>
-                    <a href="#" class="close">닫기</a>
+                  <div class="section">
+                    <div class="thumb_wrap">
+                      <a href="#" class="link_thumb">
+                        <img src="image/thumb.jpeg" alt="정현" width="166" height="166">
+                        <ul class="related_thumbs">
+                          <li class="thumbs">
+                            <img src="image/thumb.jpeg" alt="정현" width="166" height="166">
+                          </li><li class="thumbs">
+                            <img src="image/thumb.jpeg" alt="정현" width="166" height="166">
+                          </li><li class="thumbs">
+                            <img src="image/thumb.jpeg" alt="정현" width="166" height="166">
+                          </li>
+                        </ul>
+                        <span class="toggle"></span>
+                      </a>
+                    </div>
+                    <div class="wrap_info">
+                      <div class="info_user">
+                        <img src="image/profile.png" width="43" height="43" alt="프로필 이미지" class="profile">
+                        <div class="info_text">
+                          <strong class="unick">닉네임닉네임</strong>
+                          <span class="date">2017. 7. 14.</span>
+                        </div>
+                      </div>
+                      <a href="#" class="link_title">
+                        <h2 class="title_info">덥고 습한 여름 인테리어 초록식물 공간별 연출법</h2>
+                      </a>
+                      <a href="#" class="link_desc">
+                        <p class="desc_info">
+                          여름이라는 말에 걸맞게 조금만 움직여도 온몸에서 끈적거리는 땀이 흘러내리네요. 초록식물을 보고 있으니 조금은 체감온도가
+                          낮아지는 기분이 들지 않나요? 장소와 관계없이 소박하지만 존재감 있게, 작지만 쾌적하게 해 줄 초록화분 연출법이라는 생각
+                          이 들어요. 도움되시는 자료 되셨길요~
+                        </p>
+                      </a>
+                      <span class="count_sym">공감 50</span>
+                    </div>
+                  </div>
+                  <div class="section">
+                    <div class="thumb_wrap">
+                      <a href="#" class="link_thumb">
+                        <img src="image/thumb.jpeg" alt="정현" width="166" height="166">
+                        <ul class="related_thumbs">
+                          <li class="thumbs">
+                            <img src="image/thumb.jpeg" alt="정현" width="166" height="166">
+                          </li><li class="thumbs">
+                            <img src="image/thumb.jpeg" alt="정현" width="166" height="166">
+                          </li><li class="thumbs">
+                            <img src="image/thumb.jpeg" alt="정현" width="166" height="166">
+                          </li>
+                        </ul>
+                        <span class="toggle"></span>
+                      </a>
+                    </div>
+                    <div class="wrap_info">
+                      <div class="info_user">
+                        <img src="image/profile.png" width="43" height="43" alt="프로필 이미지" class="profile">
+                        <div class="info_text">
+                          <strong class="unick">닉네임닉네임</strong>
+                          <span class="date">2017. 7. 14.</span>
+                        </div>
+                      </div>
+                      <a href="#" class="link_title">
+                        <h2 class="title_info">덥고 습한 여름 인테리어 초록식물 공간별 연출법</h2>
+                      </a>
+                      <a href="#" class="link_desc">
+                        <p class="desc_info">
+                          여름이라는 말에 걸맞게 조금만 움직여도 온몸에서 끈적거리는 땀이 흘러내리네요. 초록식물을 보고 있으니 조금은 체감온도가
+                          낮아지는 기분이 들지 않나요? 장소와 관계없이 소박하지만 존재감 있게, 작지만 쾌적하게 해 줄 초록화분 연출법이라는 생각
+                          이 들어요. 도움되시는 자료 되셨길요~
+                        </p>
+                      </a>
+                      <span class="count_sym">공감 50</span>
+                    </div>
                   </div>
                 </div>
               </div>
