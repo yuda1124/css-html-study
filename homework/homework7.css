@@ -48,8 +48,14 @@ select {
   position: relative;
   display: inline-block;
   width: 50%;
-  height: 40px;
+  
   text-align: center;
+}
+.left_inner {
+  height: 40px;
+}
+.right_inner {
+  height: 40px;
 }
 .img_reverse {
   background-image: url('image/reverse.png');
@@ -57,14 +63,13 @@ select {
   position: absolute;
   width: 51px;
   height: 30px;
-  right: 0px;
+  right: -25.5px;
   top: 0px;
 }
 .select_right {
   display: inline-block;
   text-align: center;
-  height: 40px;
-  width: 49%;
+  width: 50%;
 }
 .arrow_wrap {
   position: relative;
@@ -155,11 +160,12 @@ select {
 }
 .button_right {
   width: 106px;
-  height: 43px;
+  height: 45px;
   background-color: #00dd69;
   border: 1px solid #00c85d;
   margin-right: 24px;
   color: #fff;
+  font-size: 18px;
 }
 .right_button_wrap {
   float: right;
@@ -245,10 +251,13 @@ select {
     padding-top: 10px;
   }
   .input_area {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .inner_input {
     border-bottom: 1px solid #d9d9d9;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    padding-bottom: 0;
   }
   .header {
     border-bottom: 2px solid #ebebeb;
@@ -262,10 +271,14 @@ select {
   }
   .output_area {
     margin-top: 10px;
-    border: 1px solid #d9d9d9;
     padding-bottom: 0;
   }
+  .inner_output {
+    border: 1px solid #d9d9d9;
+  }
   .button_left {
+    width: 70px;
+    height: 45px;
     margin-left: 1px;
   }
   .button_right {
@@ -288,34 +301,42 @@ select {
   }
   .output_area {
     float: left;
-    width: 49%;
+    width: 50%;
     margin-top: 0;
   }
-  .input_area {
+  .inner_input {
     margin-right: 5px;
     border: 1px solid #d9d9d9;
+  }
+  .inner_output {
+    margin-left: 5px;
   }
   .select_area {
     padding-top: 0;
   }
-  .select_left {
+  .left_inner {
     border-color: #ddd;
     border-style: solid;
     border-width: 1px 1px 0 1px;
-    float: left;
+    padding-top: 15px;
     margin-right: 5px;
+  }
+  .select_left {
+    float: left;
     text-align: left;
     text-indent: 15px;
+  }
+  .right_inner {
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
     padding-top: 15px;
+    margin-left: 5px;
   }
   .select_right {
-    border-color: #ddd;
-    border-style: solid;
-    border-width: 1px 1px 0 1px;
     float: left;
     text-align: left;
     text-indent: 15px;
-    padding-top: 15px;
   }
   .select_area {
     border: 0;
@@ -325,8 +346,8 @@ select {
     background-size: 19px 19px;
     width: 19px;
     height: 19px;
-    top: 10px;
-    right: 5px;
+    top: 20px;
+    right: 15px;
   }
   .wrap_user_input {
     border-top: 0;
