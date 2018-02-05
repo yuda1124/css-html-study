@@ -16,7 +16,8 @@ th,
 tr,
 span,
 label,
-fieldset {
+fieldset,
+button {
   margin: 0;
   padding: 0;
 }
@@ -31,7 +32,8 @@ h6,
 span,
 strong,
 label,
-div {
+div,
+button {
   font-family: dotum, '돋음', sans-serif;
   color: #444;
   font-size: 14px;
@@ -240,10 +242,7 @@ em {font-style: normal; }
 .wrapper_hw1 .list_article > ul > li {
   margin-bottom: 10px;
 }
-.wrapper_hw1 .thumb_article {
-  width: 166px;
-  height: 108px;
-}
+
 .wrapper_hw1 .article_preview {
   width: 166px;
   float: left;
@@ -273,20 +272,20 @@ em {font-style: normal; }
   padding-top: 22px;
   border-top: 1px solid #000;
 }
-.wrapper_hw2 .col_desc {
-  width: 50%;
-}
-.wrapper_hw2 .right_desc {
-  border-left: 1px solid #ddd;
+.wrapper_hw2 .col_age {
+  width: 1px;
+  background: #ccc;
+  position: relative;
 }
 
 .wrapper_hw2 .age {
   position: absolute;
   top: 20px;
-  left: -15px;
-  width: 32px;
+  left: -25px;
+  width: 50px;
   height: 26px;
   line-height: 26px;
+  text-align: center;
   background: #fff;
   font-family: "Regular";
   font-size: 15px;
@@ -321,7 +320,7 @@ em {font-style: normal; }
 }
 
 .wrapper_hw2 .th_age {
-  height: 0;
+  height: 1px;
 }
 .wrapper_hw2 .year {
   padding: 0 28px;
@@ -332,13 +331,15 @@ em {font-style: normal; }
 }
 .wrapper_hw2 .event {
   overflow: hidden;
-  line-height: 23px;
+}
+.wrapper_hw2 .wrap_event {
+  margin: 3px 0 2px;
+}
+.wrapper_hw2 .li_event {
+  line-height: 20px;
 }
 .wrapper_hw2 .event_left{
   text-align: right;
-}
-.wrapper_hw2 .event {
-  overflow: hidden;
 }
 .wrapper_hw2 .left {
   float: left;
@@ -347,16 +348,13 @@ em {font-style: normal; }
   float: right;
 }
 .wrapper_hw2 .wrap_desc {
+  overflow: hidden;
   padding: 20px 0;
 }
 .wrapper_hw2 .inner_div:after, .wrapper_hw2 .wrap_desc:after {
   content: '';
   display: block;
   clear: both;
-}
-.wrapper_hw2 .thumb {
-  width: 100px;
-  height: 72px;
 }
 .wrapper_hw2 .thumb_left {
   margin-right: 32px;
@@ -443,33 +441,25 @@ em {font-style: normal; }
 .wrapper_hw3 .payment .radio_wrap {
   margin-right: 25px;
 }
-.wrapper_hw3 .radio_off {
+.wrapper_hw3 .radio_button {
   display: inline-block;
   width: 22px;
   height: 22px;
   background-image: url("image/form/ico_radio_off.png");
   vertical-align: middle;
 }
-.wrapper_hw3 .radio_on {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
+.wrapper_hw3 .selected {
   background-image: url("image/form/ico_radio_on.png");
-  vertical-align: middle;
 }
-.wrapper_hw3 .check_on {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  background-image: url("image/form/ico_checkbox_on.png");
-  vertical-align: middle;
-}
-.wrapper_hw3 .check_off {
+.wrapper_hw3 .checkbox {
   display: inline-block;
   width: 22px;
   height: 22px;
   background-image: url("image/form/ico_checkbox_off.png");
   vertical-align: middle;
+}
+.wrapper_hw3 .checked {
+  background-image: url("image/form/ico_checkbox_on.png");
 }
 .wrapper_hw3 .check_wrap {
   margin-right: 25px;
@@ -503,11 +493,13 @@ em {font-style: normal; }
   text-indent: 10px;
   border: 1px solid #D3D3D3;
 }
-.wrapper_hw3 .input_txt:focus {
-  border: 1px solid #32CD32;
+.wrapper_hw3 .focused .input_txt {
+  border: 2px solid #32CD32;
+  height: 13px;
+  position: relative;
 }
 
-.wrapper_hw3 .arw_off {
+.wrapper_hw3 .arw {
   position: absolute;
   width: 10px;
   height: 5px;
@@ -519,18 +511,14 @@ em {font-style: normal; }
   width: 100px;
   float: left;
 }
-.wrapper_hw3 .arw_on {
-  position: absolute;
-  width: 10px;
-  height: 5px;
-  right: 10px;
+.wrapper_hw3 .opened .arw {
   background-image: url("image/form/ico_arw_on.png");
-  top: 10px;
 }
 .wrapper_hw3 .regi_selector {
   background-color: #fff;
   padding: 2px 5px;
   border: 1px solid #333;
+  margin-left: -1px;
 }
 .wrapper_hw3 .wrap_regi {
   margin: 0 10px;
@@ -544,8 +532,8 @@ em {font-style: normal; }
   background-color: white;
   background-repeat: no-repeat;
   background-image: url("image/form/btn_calendar.png");
-  margin-left: -4px;
-  vertical-align: middle;
+  margin-left: -1px;
+  vertical-align: top;
   border: 1px solid #D3D3D3;
 }
 .wrapper_hw3 .area_button {
@@ -555,12 +543,13 @@ em {font-style: normal; }
 }
 .wrapper_hw3 .selected_label {
   border: 2px solid #32CD32;
+  position: relative;
 }
 .wrapper_hw3 .selected_button {
   color: #32CD32;
 }
 .wrapper_hw3 .date_picker {
-  display: inline;
+  display: inline-block;
 }
 .wrapper_hw3 .options {
   position: absolute;
@@ -568,15 +557,31 @@ em {font-style: normal; }
   right: 0;
   top: 28px;
   border: 1px solid #D3D3D3;
+  display: none;
 }
-.wrapper_hw3 .options > li {
-  padding: 10px 0;
+.wrapper_hw3 .opened > .options {
+  display: block;
+}
+.wrapper_hw3 .options > .opt {
   background-color: white;
 }
-.wrapper_hw3 .options > li:hover {
+.wrapper_hw3 .options > .opt:hover {
   background-color: #F0F8FF;
+}
+.wrapper_hw3 .btn_opt {
+  background-color: transparent;
+  padding: 10px 0;
+  width: 90px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+.wrapper_hw3 .options > .opt:hover .btn_opt {
   color: #32CD32;
 }
+
 .wrapper_hw3 .button_search {
   background-color: #32CD32;
   padding: 10px 30px;

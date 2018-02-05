@@ -3,7 +3,7 @@ html, body, .wrapper {
   width: 100%;
   height: 100%;
 }
-html, body, button, a, p, textarea {
+html, body, button, a, p, textarea, h1 {
   padding: 0;
   margin: 0;
 }
@@ -23,13 +23,23 @@ select {
   border: 0;
   background-color: #fff;
 }
+.blind {
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0
+}
 .header {
   padding: 5px 10px;
 }
 .logo {
   width: 115px;
   height: 32px;
-  float: left;
   background-color: #000;
   text-align: center;
   color: #fff;
@@ -48,7 +58,7 @@ select {
   position: relative;
   display: inline-block;
   width: 50%;
-  
+
   text-align: center;
 }
 .left_inner {
@@ -66,6 +76,9 @@ select {
   right: -25.5px;
   top: 0px;
 }
+.link_main {
+  display: inline-block;
+}
 .select_right {
   display: inline-block;
   text-align: center;
@@ -75,15 +88,8 @@ select {
   position: relative;
   margin-right: 5px;
 }
-.info_area::before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 0;
-  vertical-align: middle;
-}
 .profile {
-  vertical-align: middle;
+  vertical-align: top;
   display: inline-block;
 }
 .arrow {
@@ -116,19 +122,11 @@ select {
   height: 16px;
   background-image: url('image/more.png');
   background-size: 23px 16px;
-  vertical-align: middle;
+  position: absolute;
+  right: 10px;
+  top: 13px;
 }
-.wrap_more {
-  height: 32px;
-  float: right;
-}
-.wrap_more::before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 0;
-  vertical-align: middle;
-}
+
 .img_setting {
   width: 15px;
   height: 20px;
@@ -139,14 +137,14 @@ select {
 }
 .info_area {
   position: relative;
-  height: 32px;
   float: right;
   display: none;
+  padding: 5px 0;
+  margin-right: 25px;
 }
 .select_nick {
   font-size: 10px;
   color: #b4b4b4;
-  vertical-align: middle;
   display: inline-block;
 }
 .small_arow {
@@ -238,8 +236,12 @@ select {
   .info_area {
     display: block;
   }
-  .wrap_more {
-    display: none;
+  .img_more {
+    width: 15px;
+    height: 20px;
+    background-image: url('image/setting.png');
+    background-size: 15px 20px;
+    top: 11px;
   }
   .count {
     display: inline;
@@ -260,6 +262,7 @@ select {
     border-right: 1px solid #ddd;
   }
   .header {
+    position: relative;
     border-bottom: 2px solid #ebebeb;
   }
   .main {

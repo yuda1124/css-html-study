@@ -8,7 +8,7 @@
   <body>
     <div class="wrapper">
       <div class="header">
-        <a href="#">
+        <a href="#" class="link_main">
           <h1 class="logo">
             로고
           </h1>
@@ -19,14 +19,8 @@
             <option value="" hidden>nick name</option>
             <option>option1</option>
           </select>
-          <span class="arrow_wrap">
-            <button type="button" class="small_arow"></button>
-          </span>
-          <button class="img_setting" type="button"></button>
         </div>
-        <div class="wrap_more">
-          <button class="img_more" type="button"></button>
-        </div>
+        <button class="img_more" type="button"></button>
       </div>
       <div class="main">
         <div class="select_area">
@@ -58,7 +52,9 @@
             <div class="inner_input">
               <div class="wrap_user_input">
                 <textarea class="user_input" placeholder="내용"></textarea>
-                <button class="img_x"></button>
+                <button class="img_x" type="button">
+                  <span class="blind">입력 지우기</span>
+                </button>
               </div>
               <div class="button_area left_area">
                 <button class="button_left" type="button">버튼1</button>
